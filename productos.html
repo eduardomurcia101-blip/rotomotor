@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explora repuestos y accesorios para tu vehículo por categoría.">
+  <title>Productos | Ruta Motor</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div class="announcement">Envío gratis en compras superiores a $100.000 · Repuestos para disfrutar cada camino</div>
+
+  <header class="site-header">
+    <div class="header-main">
+      <a class="logo" href="index.html" aria-label="Ruta Motor, inicio">RUTA<span>MOTOR</span></a>
+      <form class="search" id="catalog-search-form" role="search">
+        <input id="catalog-search" type="search" aria-label="Buscar productos" placeholder="¿Qué repuesto estás buscando?">
+        <button type="submit">Buscar</button>
+      </form>
+      <a class="cart-link" href="#carrito" aria-label="Ver carrito" data-cart-open>🛒 Carrito (0)</a>
+    </div>
+    <nav class="nav-inner" aria-label="Navegación principal">
+      <a href="index.html">Inicio</a>
+      <a href="#categorias">Categorías</a>
+      <a href="#productos">Productos</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="products-intro" aria-labelledby="page-title">
+      <p class="eyebrow">Catálogo Ruta Motor</p>
+      <h1 id="page-title">Repuestos para seguir tu camino</h1>
+      <p>Explora nuestros productos por categoría o busca el repuesto que necesitas.</p>
+    </section>
+
+    <div class="catalog-layout">
+      <aside class="category-filter" id="categorias" aria-labelledby="category-title">
+        <h2 id="category-title">Categorías</h2>
+        <nav class="filter-list" aria-label="Filtrar por categoría">
+          <button class="filter-button active" type="button" data-category-filter="todas" aria-pressed="true">Todos los productos</button>
+          <button class="filter-button" id="baterias" type="button" data-category-filter="baterias" aria-pressed="false">🔋 Baterías</button>
+          <button class="filter-button" id="motor-filtros" type="button" data-category-filter="motor-filtros" aria-pressed="false">⚙️ Motor y filtros</button>
+          <button class="filter-button" id="llantas-ruedas" type="button" data-category-filter="llantas-ruedas" aria-pressed="false">🛞 Llantas y ruedas</button>
+          <button class="filter-button" id="iluminacion" type="button" data-category-filter="iluminacion" aria-pressed="false">💡 Iluminación</button>
+        </nav>
+      </aside>
+
+      <section id="productos" aria-label="Lista de productos">
+        <div class="catalog-toolbar">
+          <p id="product-count" aria-live="polite">40 productos</p>
+          <a class="text-link" href="index.html">Volver al inicio</a>
+        </div>
+        <div class="product-grid catalog-grid">
+          <article class="product-card" data-category="baterias" data-name="Batería compacta 12V">
+            <img class="product-art" src="assets/productos/bateria_auto.webp" data-fallback="assets/productos/placeholder.svg" alt="Imagen de Batería compacta 12V" loading="lazy" decoding="async">
+            <div class="product-info">
+              <p class="product-category">Baterías</p>
+              <h3>Batería compacta 12V</h3>
+              <p>Para automóviles compactos y uso diario.</p>
+              <div class="product-bottom"><span class="price">$249.900</span><button class="add-button" type="button">Agregar</button></div>
+              <p class="product-stock">Disponibles: 12 unidades</p>
+            </div>
+          </article>
+          <article class="product-card" data-category="baterias" data-name="Batería para camioneta 12V">
+            <img class="product-art" src="assets/productos/bateria_camioneta.webp" data-fallback="assets/productos/placeholder.svg" alt="Imagen de Batería para camioneta 12V" loading="lazy" decoding="async">
+            <div class="product-info">
+              <p class="product-category">Baterías</p>
+              <h3>Batería para camioneta 12V</h3>
+              <p>Mayor capacidad para camionetas.</p>
+              <div class="product-bottom"><span class="price">$389.900</span><button class="add-button" type="button">Agregar</button></div>
+              <p class="product-stock">Disponibles: 8 unidades</p>
+            </div>
+          </article>
+          <article class="product-card" data-category="baterias" data-name="Batería para motocicleta">
+            <img class="product-art" src="assets/productos/bateria_moto.webp" data-fallback="assets/productos/placeholder.svg" alt="Imagen de Batería para motocicleta" loading="lazy" decoding="async">
+            <div class="product-info">
+              <p class="product-category">Baterías</p>
+              <h3>Batería para motocicleta</h3>
+              <p>Formato compacto para moto urbana.</p>
+              <div class="product-bottom"><span class="price">$119.900</span><button class="add-button" type="button">Agregar</button></div>
+              <p class="product-stock">Disponibles: 15 unidades</p>
+            </div>
+          </article>
+          <article class="product-card" data-category="baterias" data-name="Cargador portátil de batería">
+            <img class="product-art" src="assets/productos/cargador_bateria.webp" data-fallback="assets/productos/placeholder.svg" alt="Imagen de Cargador portátil de batería" loading="lazy" decoding="async">
+            <div class="product-info">
+              <p class="product-category">Baterías</p>
+              <h3>Cargador portátil de batería</h3>
+              <p>Práctico cargador para tener a mano.</p>
+              <div class="product-bottom"><span class="price">$179.900</span><button class="add-button" type="button">Agregar</button></div>
+              <p class="product-stock">Disponibles: 6 unidades</p>
+            </div>
+          </article>
+          <article class="product-card" data-category="baterias" data-name="Terminales para batería">
+            <img class="product-art" src="assets/productos/terminales_bateria.webp" data-fallback="assets/productos/placeholder.svg" alt="Imagen de Terminales para batería" loading="lazy" decoding="async">
+            <div class="product-info">
+              <p class="product-category">Baterías</p>
+              <h3>Terminales para batería</h3>
+              <p>Par de terminales de repuesto.</p>
+              <div class="product-bottom"><span class="price">$24.900</span><button class="add-button" type="button">Agregar</button></div>
+              <p class="product-stock">Disponibles: 22 unidades</p>
+            </div>
+          </article>
+          <article class="product-card" data-category="baterias" data-name="Batería AGM para motocicleta 12V">
+            <img class="product-art" src="assets/productos/bateria_agm.webp" data-fallback="assets/productos/placeholder.svg" alt="Imagen de Batería AGM para motocicleta 12V" loading="lazy" decoding="async">
+            <div class="product-info">
+              <p class="product-category">Baterías</p>
+              <h3>Batería AGM para motocicleta 12V</h3>
+              <p>Batería sellada para motocicleta de uso diario.</p>
+              <div class="product-bottom"><span class="price">$159.900</span><button class="add-button" type="button">Agregar</button></div>
+              <p class="product-stock">Disponibles: 12 unidades</p>
+            </div>
+          </article>
+          <article class="product-card" data-category="baterias" data-name="Batería de litio para motocicleta">
+            <img class="product-art" src="assets/productos/bateria_moto_ligera.webp" data-fallback="assets/productos/placeholder.svg" alt="Imagen de Batería de litio para motocicleta" loading="lazy" decoding="async">
+            <div class="product-info">
+              <p class="product-category">Baterías</p>
+              <h3>Batería de litio para motocicleta</h3>
+              <p>Alternativa liviana para motos compatibles.</p>
+              <div class="product-bottom"><span class="price">$289.900</span><button class="add-button" type="button">Agregar</button></div>
+              <p class="product-stock">Disponibles: 5 unidades</p>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="motor-filtros" data-name="Filtro de aire para motor">
+            <img class="product-art" src="assets/productos/filtro_aire.webp" data-fallback="assets/productos/placeholder.svg" alt="Imagen de Filtro de aire para motor" loading="lazy" decoding="async">
+            <div class="product-info">
+              <p class="product-category">Motor y filtros</p>
+              <h3>Filtro de aire para motor</h3>
+              <p>Repuesto para el sistema de admisión.</p>
+              <div class="product-bottom"><span class="price">$45.900</span><button class="add-button" type="button">Agregar</button></div>
+              <p class="product-stock">Disponibles: 20 unidades</p>
+            </div>
+          </article>
+          <article class="product-card" data-category="motor-filtros" data-name="Filtro de aceite">
+            <img class="product-art" src="assets/productos/filtro_aceite.webp" data-fallback="assets/productos/placeholder.svg" alt="Imagen de Filtro de aceite" loading="lazy" decoding="async">
+            <div class="product-info">
+              <p class="product-category">Motor y filtros</p>
+              <h3>Filtro de aceite</h3>
+              <p>Para el mantenimiento periódico del motor.</p>
+              <div class="product-bottom"><span class="price">$32.900</span><button class="add-button" type="button">Agregar</button></div>
+              <p class="product-stock">Disponibles: 25 unidades</p>
+            </div>
+          </article>
+          <article class="product-card" data-category="motor-filtros" data-name="Bujía para automóvil">
+            <img class="product-art" src="assets/productos/bujia.webp" data-fallback="assets/productos/placeholder.svg" alt="Imagen de Bujía para automóvil" loading="lazy" decoding="async">
+            <div class="product-info">
+              <p class="product-category">Motor y filtros</p>
+              <h3>Bujía para automóvil</h3>
+              <p>Repuesto para motor a gasolina.</p>
+              <div class="product-bottom"><span class="price">$28.900</span><button class="add-button" type="button">Agregar</button></div>
+              <p class="product-stock">Disponibles: 30 unidades</p>
+            </div>
+          </article>
+          <article class="product-card" data-category="motor-filtros" data-name="Correa de accesorios">
+            <img class="product-art" src="assets/productos/correa_accesorios.webp" data-fallback="assets/productos/placeholder.svg" alt="Imagen de Correa de accesorios" loading="lazy" decoding="async">
+            <div class="product-info">
+              <p class="product-category">Motor y filtros</p>
+              <h3>Correa de accesorios</h3>
+              <p>Repuesto para el sistema de accesorios.</p>
+              <div class="product-bottom"><span class="price">$74.900</span><button class="add-button" type="button">Agregar</button></div>
+              <p class="product-stock">Disponibles: 10 unidades</p>
+            </div>
+          </article>
+          <article class="product-card" data-category="motor-filtros" data-name="Filtro de combustible">
+            <img class="product-art" src="assets/productos/filtro_gasolina.webp" data-fallback="assets/productos/placeholder.svg" alt="Imagen de Filtro de combustible" loading="lazy" decoding="async">
+            <div class="product-info">
+              <p class="product-category">Motor y filtros</p>
+              <h3>Filtro de combustible</h3>
+              <p>Ayuda a retener impurezas del combustible.</p>
+              <div class="product-bottom"><span class="price">$39.900</span><button class="add-button" type="button">Agregar</button></div>
+              <p class="product-stock">Disponibles: 16 unidades</p>
+            </div>
+          </article>
+          <article class="product-card" data-category="motor-filtros" data-name="Aceite 4T para motocicleta">
+            <img class="product-art" src="assets/productos/aceite_4t.webp" data-fallback="assets/productos/placeholder.svg" alt="Imagen de Aceite 4T para motocicleta" loading="lazy" decoding="async">
+            <div class="product-info">
+              <p class="product-category">Motor y filtros · Motos</p>
+              <h3>Aceite 4T para motocicleta</h3>
+              <p>Aceite para motor de cuatro tiempos; verifica la viscosidad indicada por el fabricante.</p>
+              <div class="product-bottom"><span class="price">$49.900</span><button class="add-button" type="button">Agregar</button></div>
+              <p class="product-stock">Disponibles: 24 unidades</p>
+            </div>
+          </article>
+          <article class="product-card" data-category="motor-filtros" data-name="Kit de arrastre para motocicleta">
+            <img class="product-art" src="assets/productos/kit_arrastre.webp" data-fallback="assets/productos/placeholder.svg" alt="Imagen de Kit de arrastre para motocicleta" loading="lazy" decoding="async">
+            <div class="product-info">
+              <p class="product-category">Motor y filtros · Motos</p>
+              <h3>Kit de arrastre para motocicleta</h3>
+              <p>Cadena, piñón y corona para transmisión final.</p>
+              <div class="product-bottom"><span class="price">$189.900</span><button class="add-button" type="button">Agregar</button></div>
+              <p class="product-stock">Disponibles: 9 unidades</p>
+            </div>
+          </article>
+          <article class="product-card" data-category="motor-filtros" data-name="Pastillas de freno delanteras para moto">
+            <img class="product-art" src="assets/productos/pastilla_freno.jpg" data-fallback="assets/productos/placeholder.svg" alt="Imagen de Pastillas de freno delanteras para moto" loading="lazy" decoding="async">
+            <div class="product-info">
+              <p class="product-category">Motor y filtros · Motos</p>
+              <h3>Pastillas de freno delanteras para moto</h3>
+              <p>Repuesto de fricción para freno delantero de disco.</p>
+              <div class="product-bottom"><span class="price">$44.900</span><button class="add-button" type="button">Agregar</button></div>
+              <p class="product-stock">Disponibles: 18 unidades</p>
+            </div>
+          </article>
+          <article class="product-card" data-category="motor-filtros" data-name="Kit de discos de clutch para moto">
+            <img class="product-art" src="assets/productos/discos_clucth.webp" data-fallback="assets/productos/placeholder.svg" alt="Imagen de Kit de discos de clutch para moto" loading="lazy" decoding="async">
+            <div class="product-info">
+              <p class="product-category">Motor y filtros · Motos</p>
+              <h3>Kit de discos de clutch para moto</h3>
+              <p>Discos de embrague para reemplazo y mantenimiento.</p>
+              <div class="product-bottom"><span class="price">$99.900</span><button class="add-button" type="button">Agregar</button></div>
+              <p class="product-stock">Disponibles: 7 unidades</p>
+            </div>
+          </article>
+          <article class="product-card" data-category="motor-filtros" data-name="Kit de pistón y anillos para moto">
+            <img class="product-art" src="assets/productos/kit_piston_anillos.webp" data-fallback="assets/productos/placeholder.svg" alt="Imagen de Kit de pistón y anillos para moto" loading="lazy" decoding="async">
+            <div class="product-info">
+              <p class="product-category">Motor y filtros · Motos</p>
+              <h3>Kit de pistón y anillos para moto</h3>
+              <p>Componentes de repuesto para reparación de motor.</p>
+              <div class="product-bottom"><span class="price">$149.900</span><button class="add-button" type="button">Agregar</button></div>
+              <p class="product-stock">Disponibles: 6 unidades</p>
+            </div>
+          </article>
+          <article class="product-card" data-category="motor-filtros" data-name="Kit de empaques para motor de moto">
+            <img class="product-art" src="assets/productos/kit_empaques.webp" data-fallback="assets/productos/placeholder.svg" alt="Imagen de Kit de empaques para motor de moto" loading="lazy" decoding="async">
+            <div class="product-info">
+              <p class="product-category">Motor y filtros · Motos</p>
+              <h3>Kit de empaques para motor de moto</h3>
+              <p>Juego de juntas para mantenimiento del motor.</p>
+              <div class="product-bottom"><span class="price">$69.900</span><button class="add-button" type="button">Agregar</button></div>
+              <p class="product-stock">Disponibles: 8 unidades</p>
+            </div>
+          </article>
+          <article class="product-card" data-category="motor-filtros" data-name="Filtro de aceite para motocicleta">
+            <img class="product-art" src="assets/productos/filtro_aceitemoto.webp" data-fallback="assets/productos/placeholder.svg" alt="Imagen de Filtro de aceite para motocicleta" loading="lazy" decoding="async">
+            <div class="product-info">
+              <p class="product-category">Motor y filtros · Motos</p>
+              <h3>Filtro de aceite para motocicleta</h3>
+              <p>Filtro de repuesto para sistema de lubricación.</p>
+              <div class="product-bottom"><span class="price">$19.900</span><button class="add-button" type="button">Agregar</button></div>
+              <p class="product-stock">Disponibles: 28 unidades</p>
+            </div>
+          </article>
+          <article class="product-card" data-category="motor-filtros" data-name="Filtro de aire para motocicleta">
+            <img class="product-art" src="assets/productos/filtro_aire_moto.webp" data-fallback="assets/productos/placeholder.svg" alt="Imagen de Filtro de aire para motocicleta" loading="lazy" decoding="async">
+            <div class="product-info">
+              <p class="product-category">Motor y filtros · Motos</p>
+              <h3>Filtro de aire para motocicleta</h3>
+              <p>Elemento filtrante para la admisión de aire.</p>
+              <div class="product-bottom"><span class="price">$24.900</span><button class="add-button" type="button">Agregar</button></div>
+              <p class="product-stock">Disponibles: 20 unidades</p>
+            </div>
+          </article>
+          <article class="product-card" data-category="motor-filtros" data-name="Carburador para motocicleta 125 cc">
+            <img class="product-art" src="assets/productos/carburador_moto.webp" data-fallback="assets/productos/placeholder.svg" alt="Imagen de Carburador para motocicleta 125 cc" loading="lazy" decoding="async">
+            <div class="product-info">
+              <p class="product-category">Motor y filtros · Motos</p>
+              <h3>Carburador para motocicleta 125 cc</h3>
+              <p>Repuesto para sistema de alimentación compatible.</p>
+              <div class="product-bottom"><span class="price">$139.900</span><button class="add-button" type="button">Agregar</button></div>
+              <p class="product-stock">Disponibles: 4 unidades</p>
+            </div>
+          </article>
+          <article class="product-card" data-category="motor-filtros" data-name="Cable de clutch para motocicleta">
+            <img class="product-art" src="assets/productos/guaya_clutch.webp" data-fallback="assets/productos/placeholder.svg" alt="Imagen de Cable de clutch para motocicleta" loading="lazy" decoding="async">
+            <div class="product-info">
+              <p class="product-category">Motor y filtros · Motos</p>
+              <h3>Cable de clutch para motocicleta</h3>
+              <p>Cable de repuesto para accionamiento del embrague.</p>
+              <div class="product-bottom"><span class="price">$22.900</span><button class="add-button" type="button">Agregar</button></div>
+              <p class="product-stock">Disponibles: 15 unidades</p>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="llantas-ruedas" data-name="Llanta para automóvil rin 15">
+            <img class="product-art" src="assets/productos/llanta_rin15.webp" data-fallback="assets/productos/placeholder.svg" alt="Imagen de Llanta para automóvil rin 15" loading="lazy" decoding="async">
+            <div class="product-info">
+              <p class="product-category">Llantas y ruedas</p>
+              <h3>Llanta para automóvil rin 15</h3>
+              <p>Llanta de uso urbano para automóvil.</p>
+              <div class="product-bottom"><span class="price">$329.900</span><button class="add-button" type="button">Agregar</button></div>
+              <p class="product-stock">Disponibles: 10 unidades</p>
+            </div>
+          </article>
+          <article class="product-card" data-category="llantas-ruedas" data-name="Llanta para camioneta rin 16">
+            <img class="product-art" src="assets/productos/llanta_rin16.webp" data-fallback="assets/productos/placeholder.svg" alt="Imagen de Llanta para camioneta rin 16" loading="lazy" decoding="async">
+            <div class="product-info">
+              <p class="product-category">Llantas y ruedas</p>
+              <h3>Llanta para camioneta rin 16</h3>
+              <p>Llanta de repuesto para camioneta.</p>
+              <div class="product-bottom"><span class="price">$489.900</span><button class="add-button" type="button">Agregar</button></div>
+              <p class="product-stock">Disponibles: 7 unidades</p>
+            </div>
+          </article>
+          <article class="product-card" data-category="llantas-ruedas" data-name="Llanta para motocicleta">
+            <img class="product-art" src="assets/productos/llanta_moto.webp" data-fallback="assets/productos/placeholder.svg" alt="Imagen de Llanta para motocicleta" loading="lazy" decoding="async">
+            <div class="product-info">
+              <p class="product-category">Llantas y ruedas</p>
+              <h3>Llanta para motocicleta</h3>
+              <p>Llanta de repuesto para moto urbana.</p>
+              <div class="product-bottom"><span class="price">$159.900</span><button class="add-button" type="button">Agregar</button></div>
+              <p class="product-stock">Disponibles: 14 unidades</p>
+            </div>
+          </article>
+          <article class="product-card" data-category="llantas-ruedas" data-name="Rin de aleación rin 15">
+            <img class="product-art" src="assets/productos/rin_15.jpg" data-fallback="assets/productos/placeholder.svg" alt="Imagen de Rin de aleación rin 15" loading="lazy" decoding="async">
+            <div class="product-info">
+              <p class="product-category">Llantas y ruedas</p>
+              <h3>Rin de aleación rin 15</h3>
+              <p>Rin de repuesto para automóvil.</p>
+              <div class="product-bottom"><span class="price">$429.900</span><button class="add-button" type="button">Agregar</button></div>
+              <p class="product-stock">Disponibles: 5 unidades</p>
+            </div>
+          </article>
+          <article class="product-card" data-category="llantas-ruedas" data-name="Válvula para llanta">
+            <img class="product-art" src="assets/productos/valvula_llanta.webp" data-fallback="assets/productos/placeholder.svg" alt="Imagen de Válvula para llanta" loading="lazy" decoding="async">
+            <div class="product-info">
+              <p class="product-category">Llantas y ruedas</p>
+              <h3>Válvula para llanta</h3>
+              <p>Válvula de repuesto para rueda.</p>
+              <div class="product-bottom"><span class="price">$9.900</span><button class="add-button" type="button">Agregar</button></div>
+              <p class="product-stock">Disponibles: 40 unidades</p>
+            </div>
+          </article>
+          <article class="product-card" data-category="llantas-ruedas" data-name="Llanta delantera para motocicleta">
+            <img class="product-art" src="assets/productos/llanta_delantera_moto.webp" data-fallback="assets/productos/placeholder.svg" alt="Imagen de Llanta delantera para motocicleta" loading="lazy" decoding="async">
+            <div class="product-info">
+              <p class="product-category">Llantas y ruedas · Motos</p>
+              <h3>Llanta delantera para motocicleta</h3>
+              <p>Llanta delantera para moto urbana; verifica la medida compatible.</p>
+              <div class="product-bottom"><span class="price">$169.900</span><button class="add-button" type="button">Agregar</button></div>
+              <p class="product-stock">Disponibles: 8 unidades</p>
+            </div>
+          </article>
+          <article class="product-card" data-category="llantas-ruedas" data-name="Llanta trasera para motocicleta">
+            <img class="product-art" src="assets/productos/llanta_trasera_moto.webp" data-fallback="assets/productos/placeholder.svg" alt="Imagen de Llanta trasera para motocicleta" loading="lazy" decoding="async">
+            <div class="product-info">
+              <p class="product-category">Llantas y ruedas · Motos</p>
+              <h3>Llanta trasera para motocicleta</h3>
+              <p>Llanta trasera de repuesto; confirma la medida de tu moto.</p>
+              <div class="product-bottom"><span class="price">$199.900</span><button class="add-button" type="button">Agregar</button></div>
+              <p class="product-stock">Disponibles: 6 unidades</p>
+            </div>
+          </article>
+          <article class="product-card" data-category="llantas-ruedas" data-name="Cámara para llanta de motocicleta">
+            <img class="product-art" src="assets/productos/camara_aire.webp" data-fallback="assets/productos/placeholder.svg" alt="Imagen de Cámara para llanta de motocicleta" loading="lazy" decoding="async">
+            <div class="product-info">
+              <p class="product-category">Llantas y ruedas · Motos</p>
+              <h3>Cámara para llanta de motocicleta</h3>
+              <p>Cámara de repuesto para rueda compatible.</p>
+              <div class="product-bottom"><span class="price">$39.900</span><button class="add-button" type="button">Agregar</button></div>
+              <p class="product-stock">Disponibles: 14 unidades</p>
+            </div>
+          </article>
+          <article class="product-card" data-category="llantas-ruedas" data-name="Kit de rodamientos de rueda para moto">
+            <img class="product-art" src="assets/productos/kit_rodamiento.webp" data-fallback="assets/productos/placeholder.svg" alt="Imagen de Kit de rodamientos de rueda para moto" loading="lazy" decoding="async">
+            <div class="product-info">
+              <p class="product-category">Llantas y ruedas · Motos</p>
+              <h3>Kit de rodamientos de rueda para moto</h3>
+              <p>Rodamientos de repuesto para mantenimiento de rueda.</p>
+              <div class="product-bottom"><span class="price">$54.900</span><button class="add-button" type="button">Agregar</button></div>
+              <p class="product-stock">Disponibles: 10 unidades</p>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="iluminacion" data-name="Bombillo LED para faro">
+            <img class="product-art" src="assets/productos/bombillos_led.webp" data-fallback="assets/productos/placeholder.svg" alt="Imagen de Bombillo LED para faro" loading="lazy" decoding="async">
+            <div class="product-info">
+              <p class="product-category">Iluminación</p>
+              <h3>Bombillo LED para faro</h3>
+              <p>Bombillo LED de repuesto para faro delantero.</p>
+              <div class="product-bottom"><span class="price">$89.900</span><button class="add-button" type="button">Agregar</button></div>
+              <p class="product-stock">Disponibles: 18 unidades</p>
+            </div>
+          </article>
+          <article class="product-card" data-category="iluminacion" data-name="Exploradoras auxiliares">
+            <img class="product-art" src="assets/productos/exploradoras.webp" data-fallback="assets/productos/placeholder.svg" alt="Imagen de Exploradoras auxiliares" loading="lazy" decoding="async">
+            <div class="product-info">
+              <p class="product-category">Iluminación</p>
+              <h3>Exploradoras auxiliares</h3>
+              <p>Juego de luces auxiliares para vehículo.</p>
+              <div class="product-bottom"><span class="price">$159.900</span><button class="add-button" type="button">Agregar</button></div>
+              <p class="product-stock">Disponibles: 9 unidades</p>
+            </div>
+          </article>
+          <article class="product-card" data-category="iluminacion" data-name="Luz trasera para automóvil">
+            <img class="product-art" src="assets/productos/luz_trasero.webp" data-fallback="assets/productos/placeholder.svg" alt="Imagen de Luz trasera para automóvil" loading="lazy" decoding="async">
+            <div class="product-info">
+              <p class="product-category">Iluminación</p>
+              <h3>Luz trasera para automóvil</h3>
+              <p>Repuesto para el conjunto de luz trasera.</p>
+              <div class="product-bottom"><span class="price">$129.900</span><button class="add-button" type="button">Agregar</button></div>
+              <p class="product-stock">Disponibles: 6 unidades</p>
+            </div>
+          </article>
+          <article class="product-card" data-category="iluminacion" data-name="Bombillo para luz direccional">
+            <img class="product-art" src="assets/productos/direccionales.webp" data-fallback="assets/productos/placeholder.svg" alt="Imagen de Bombillo para luz direccional" loading="lazy" decoding="async">
+            <div class="product-info">
+              <p class="product-category">Iluminación</p>
+              <h3>Bombillo para luz direccional</h3>
+              <p>Bombillo de repuesto para direccional.</p>
+              <div class="product-bottom"><span class="price">$18.900</span><button class="add-button" type="button">Agregar</button></div>
+              <p class="product-stock">Disponibles: 24 unidades</p>
+            </div>
+          </article>
+          <article class="product-card" data-category="iluminacion" data-name="Barra LED auxiliar">
+            <img class="product-art" src="assets/productos/barra_iluminacion.webp" data-fallback="assets/productos/placeholder.svg" alt="Imagen de Barra LED auxiliar" loading="lazy" decoding="async">
+            <div class="product-info">
+              <p class="product-category">Iluminación</p>
+              <h3>Barra LED auxiliar</h3>
+              <p>Iluminación adicional para tu vehículo.</p>
+              <div class="product-bottom"><span class="price">$219.900</span><button class="add-button" type="button">Agregar</button></div>
+              <p class="product-stock">Disponibles: 4 unidades</p>
+            </div>
+          </article>
+          <article class="product-card" data-category="iluminacion" data-name="Faro delantero para motocicleta">
+            <img class="product-art" src="assets/productos/farola_moto.webp" data-fallback="assets/productos/placeholder.svg" alt="Imagen de Faro delantero para motocicleta" loading="lazy" decoding="async">
+            <div class="product-info">
+              <p class="product-category">Iluminación · Motos</p>
+              <h3>Faro delantero para motocicleta</h3>
+              <p>Conjunto de faro delantero para moto compatible.</p>
+              <div class="product-bottom"><span class="price">$119.900</span><button class="add-button" type="button">Agregar</button></div>
+              <p class="product-stock">Disponibles: 5 unidades</p>
+            </div>
+          </article>
+          <article class="product-card" data-category="iluminacion" data-name="Stop trasero para motocicleta">
+            <img class="product-art" src="assets/productos/stop_trasero.webp" data-fallback="assets/productos/placeholder.svg" alt="Imagen de Stop trasero para motocicleta" loading="lazy" decoding="async">
+            <div class="product-info">
+              <p class="product-category">Iluminación · Motos</p>
+              <h3>Stop trasero para motocicleta</h3>
+              <p>Luz trasera de repuesto para motocicleta.</p>
+              <div class="product-bottom"><span class="price">$69.900</span><button class="add-button" type="button">Agregar</button></div>
+              <p class="product-stock">Disponibles: 7 unidades</p>
+            </div>
+          </article>
+          <article class="product-card" data-category="iluminacion" data-name="Direccionales LED para moto">
+            <img class="product-art" src="assets/productos/juego_direccionales.webp" data-fallback="assets/productos/placeholder.svg" alt="Imagen de Direccionales LED para moto" loading="lazy" decoding="async">
+            <div class="product-info">
+              <p class="product-category">Iluminación · Motos</p>
+              <h3>Direccionales LED para moto</h3>
+              <p>Juego de luces direccionales para motocicleta.</p>
+              <div class="product-bottom"><span class="price">$49.900</span><button class="add-button" type="button">Agregar</button></div>
+              <p class="product-stock">Disponibles: 11 unidades</p>
+            </div>
+          </article>
+          <article class="product-card" data-category="iluminacion" data-name="Bombillo para faro de motocicleta">
+            <img class="product-art" src="assets/productos/bombillo_farola.webp" data-fallback="assets/productos/placeholder.svg" alt="Imagen de Bombillo para faro de motocicleta" loading="lazy" decoding="async">
+            <div class="product-info">
+              <p class="product-category">Iluminación · Motos</p>
+              <h3>Bombillo para faro de motocicleta</h3>
+              <p>Bombillo de repuesto para faro delantero.</p>
+              <div class="product-bottom"><span class="price">$24.900</span><button class="add-button" type="button">Agregar</button></div>
+              <p class="product-stock">Disponibles: 16 unidades</p>
+            </div>
+          </article>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer" id="contacto">
+    <p><strong>RUTAMOTOR</strong> · Repuestos para seguir tu camino.</p>
+    <p>¿Tienes dudas? <a href="mailto:hola@rutamotor.example">Escríbenos</a> · © 2026 Ruta Motor</p>
+    <a class="admin-link" href="/admin">Administración</a>
+  </footer>
+
+  <script src="tienda.js"></script>
+</body>
+</html>

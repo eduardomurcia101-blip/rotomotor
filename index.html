@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Encuentra repuestos, accesorios y productos para el cuidado de tu vehículo.">
+  <title>Ruta Motor | Repuestos y accesorios</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div class="announcement">Envío gratis en compras superiores a $100.000 · Repuestos para disfrutar cada camino</div>
+
+  <header class="site-header">
+    <div class="header-main">
+      <a class="logo" href="#" aria-label="Ruta Motor, inicio">RUTA<span>MOTOR</span></a>
+      <form class="search" role="search" action="#">
+        <input type="search" aria-label="Buscar repuestos" placeholder="¿Qué repuesto estás buscando?">
+        <button type="submit">Buscar</button>
+      </form>
+      <a class="cart-link" href="#carrito" aria-label="Ver carrito" data-cart-open>🛒 Carrito (0)</a>
+    </div>
+    <nav class="nav-inner" aria-label="Navegación principal">
+      <a href="#categorias">Categorías</a>
+      <a href="productos.html">Repuestos</a>
+      <a href="productos.html">Accesorios</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="carousel" aria-label="Ofertas destacadas" aria-roledescription="carrusel">
+      <article class="slide active" aria-hidden="false">
+        <div class="slide-copy">
+          <p class="eyebrow">Todo para tu vehículo</p>
+          <h1>El camino empieza con el repuesto correcto</h1>
+          <p>Calidad, variedad y buenos precios para que sigas avanzando.</p>
+          <a class="primary-link" href="productos.html">Ver productos</a>
+        </div>
+        <svg class="hero-art" viewBox="0 0 420 190" fill="none" aria-hidden="true">
+          <path d="M56 118h28l27-48c7-12 18-19 32-19h91c14 0 25 6 34 18l34 49h34c13 0 23 10 23 23v19H42v-19c0-13 2-23 14-23Z" fill="currentColor"/>
+          <path d="m126 72-23 40h86V61h-42c-9 0-16 4-21 11Zm75-11v51h75l-29-42c-5-6-11-9-19-9h-27Z" fill="#263b4d"/>
+          <circle cx="111" cy="157" r="24" fill="#17212b"/>
+          <circle cx="111" cy="157" r="10" fill="#81909b"/>
+          <circle cx="314" cy="157" r="24" fill="#17212b"/>
+          <circle cx="314" cy="157" r="10" fill="#81909b"/>
+        </svg>
+      </article>
+      <article class="slide" aria-hidden="true">
+        <div class="slide-copy">
+          <p class="eyebrow">Ofertas de temporada</p>
+          <h2>Prepara tu auto para el próximo viaje</h2>
+          <p>Encuentra baterías, filtros y mantenimiento para salir con confianza.</p>
+          <a class="primary-link" href="#categorias">Explorar categorías</a>
+        </div>
+        <svg class="hero-art" viewBox="0 0 420 190" fill="none" aria-hidden="true">
+          <path d="m100 43 57-24 53 32 56-31 54 31v94l-55 29-55-30-54 31-56-31V43Z" fill="currentColor"/>
+          <path d="m157 19 54 32v93l-54-31V19Zm110 31 53-30v94l-53 29V50Z" fill="rgba(25,35,43,.32)"/>
+          <path d="m121 68 32-14v15l-32 14V68Zm0 27 32-14v15l-32 14V95Zm110-30 44-24v14l-44 24V65Z" fill="#fff" opacity=".8"/>
+        </svg>
+      </article>
+      <article class="slide" aria-hidden="true">
+        <div class="slide-copy">
+          <p class="eyebrow">Compra fácil y segura</p>
+          <h2>Los accesorios que hacen tuyo cada viaje</h2>
+          <p>Equipa tu vehículo con productos seleccionados para acompañarte.</p>
+          <a class="primary-link" href="#productos">Descubrir accesorios</a>
+        </div>
+        <svg class="hero-art" viewBox="0 0 420 190" fill="none" aria-hidden="true">
+          <path d="m210 20 112 42v40c0 31-19 54-47 73l-65 25-65-25c-28-19-47-42-47-73V62l112-42Z" fill="currentColor"/>
+          <path d="m210 42 82 31v29c0 23-14 40-35 54l-47 18-47-18c-21-14-35-31-35-54V73l82-31Z" fill="rgba(25,35,43,.32)"/>
+          <path d="m174 103 24 24 50-51" stroke="#fff" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </article>
+      <button class="carousel-control previous" type="button" aria-label="Oferta anterior">&#10094;</button>
+      <button class="carousel-control next" type="button" aria-label="Oferta siguiente">&#10095;</button>
+      <div class="carousel-dots" aria-label="Elegir oferta">
+        <button type="button" aria-label="Ir a la oferta 1" aria-current="true"></button>
+        <button type="button" aria-label="Ir a la oferta 2" aria-current="false"></button>
+        <button type="button" aria-label="Ir a la oferta 3" aria-current="false"></button>
+      </div>
+    </section>
+
+    <section id="categorias" aria-labelledby="categories-title">
+      <div class="section-heading">
+        <div>
+          <h2 id="categories-title">Compra por categoría</h2>
+          <p>Encuentra lo que necesitas para tu vehículo</p>
+        </div>
+        <a class="text-link" href="#productos">Ver todo</a>
+      </div>
+      <div class="category-grid">
+        <a class="category-card" href="productos.html#baterias">
+          <span class="category-icon" aria-hidden="true">🔋</span>
+          <strong>Baterías</strong>
+        </a>
+        <a class="category-card" href="productos.html#motor-filtros">
+          <span class="category-icon" aria-hidden="true">⚙️</span>
+          <strong>Motor y filtros</strong>
+        </a>
+        <a class="category-card" href="productos.html#llantas-ruedas">
+          <span class="category-icon" aria-hidden="true">🛞</span>
+          <strong>Llantas y ruedas</strong>
+        </a>
+        <a class="category-card" href="productos.html#iluminacion">
+          <span class="category-icon" aria-hidden="true">💡</span>
+          <strong>Iluminación</strong>
+        </a>
+      </div>
+    </section>
+
+    <section id="productos" aria-labelledby="products-title">
+      <div class="section-heading">
+        <div>
+          <h2 id="products-title">Productos destacados</h2>
+          <p>Una selección para mantenerte siempre en marcha</p>
+        </div>
+        <a class="text-link" href="productos.html">Más productos</a>
+      </div>
+      <div class="product-grid">
+        <article class="product-card">
+          <img class="product-art" src="assets/productos/bateria_camioneta.webp" data-fallback="assets/productos/placeholder.svg" alt="Imagen de Batería para camioneta 12V" loading="lazy" decoding="async">
+          <div class="product-info">
+            <h3>Batería para camioneta 12V</h3>
+            <p>Mayor capacidad para camionetas.</p>
+            <div class="product-bottom"><span class="price">$389.900</span><button class="add-button" type="button">Agregar</button></div>
+          </div>
+        </article>
+        <article class="product-card">
+          <img class="product-art" src="assets/productos/filtro_aceitemoto.webp" data-fallback="assets/productos/placeholder.svg" alt="Imagen de Filtro de aceite para motocicleta" loading="lazy" decoding="async">
+          <div class="product-info">
+            <h3>Filtro de aceite para motocicleta</h3>
+            <p>Filtro de repuesto para sistema de lubricación.</p>
+            <div class="product-bottom"><span class="price">$19.900</span><button class="add-button" type="button">Agregar</button></div>
+          </div>
+        </article>
+        <article class="product-card">
+          <img class="product-art" src="assets/productos/exploradoras.webp" data-fallback="assets/productos/placeholder.svg" alt="Imagen de Exploradoras auxiliares" loading="lazy" decoding="async">
+          <div class="product-info">
+            <h3>Exploradoras auxiliares</h3>
+            <p>Juego de luces auxiliares para vehículo.</p>
+            <div class="product-bottom"><span class="price">$159.900</span><button class="add-button" type="button">Agregar</button></div>
+          </div>
+        </article>
+        <article class="product-card">
+          <img class="product-art" src="assets/productos/kit_arrastre.webp" data-fallback="assets/productos/placeholder.svg" alt="Imagen de Kit de arrastre para motocicleta" loading="lazy" decoding="async">
+          <div class="product-info">
+            <h3>Kit de arrastre para motocicleta</h3>
+            <p>Cadena, piñón y corona para transmisión final.</p>
+            <div class="product-bottom"><span class="price">$189.900</span><button class="add-button" type="button">Agregar</button></div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contacto">
+    <p><strong>RUTAMOTOR</strong> · Repuestos para seguir tu camino.</p>
+    <p>¿Tienes dudas? <a href="mailto:hola@rutamotor.example">Escríbenos</a> · © 2026 Ruta Motor</p>
+    <a class="admin-link" href="/admin">Administración</a>
+  </footer>
+
+  <script src="tienda.js"></script>
+  <script>
+    document.querySelectorAll(".product-art[data-fallback]").forEach((image) => {
+      image.addEventListener("error", () => {
+        image.src = image.dataset.fallback;
+        image.removeAttribute("data-fallback");
+      }, { once: true });
+    });
+
+    const carousel = document.querySelector(".carousel");
+    const slides = Array.from(carousel.querySelectorAll(".slide"));
+    const dots = Array.from(carousel.querySelectorAll(".carousel-dots button"));
+    let currentSlide = 0;
+
+    function showSlide(index) {
+      currentSlide = (index + slides.length) % slides.length;
+      slides.forEach((slide, slideIndex) => {
+        const isActive = slideIndex === currentSlide;
+        slide.classList.toggle("active", isActive);
+        slide.setAttribute("aria-hidden", String(!isActive));
+        dots[slideIndex].setAttribute("aria-current", String(isActive));
+      });
+    }
+
+    carousel.querySelector(".previous").addEventListener("click", () => {
+      showSlide(currentSlide - 1);
+    });
+
+    carousel.querySelector(".next").addEventListener("click", () => {
+      showSlide(currentSlide + 1);
+    });
+
+    dots.forEach((dot, index) => {
+      dot.addEventListener("click", () => showSlide(index));
+    });
+  </script>
+</body>
+</html>

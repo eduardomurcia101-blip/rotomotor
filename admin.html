@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Administración del inventario de Ruta Motor.">
+  <title>Administración | Ruta Motor</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div class="announcement">Administración de inventario · Ruta Motor</div>
+
+  <header class="site-header">
+    <div class="header-main admin-header">
+      <a class="logo" href="index.html" aria-label="Ruta Motor, inicio">RUTA<span>MOTOR</span></a>
+      <a class="text-link" href="index.html">Volver a la tienda</a>
+    </div>
+  </header>
+
+  <main class="admin-page">
+    <section class="admin-card" aria-labelledby="admin-title">
+      <p class="eyebrow admin-eyebrow">Acceso restringido</p>
+      <h1 id="admin-title">Administración de inventario</h1>
+      <p class="admin-description">Inicia sesión para consultar y actualizar las existencias.</p>
+      <p id="admin-message" class="admin-message" role="status" hidden></p>
+
+      <form id="admin-login-form" class="admin-login-form" hidden>
+        <label for="admin-username">Usuario</label>
+        <input id="admin-username" name="username" type="text" autocomplete="username" required>
+
+        <label for="admin-password">Contraseña</label>
+        <input id="admin-password" name="password" type="password" autocomplete="current-password" required>
+
+        <button class="admin-primary-button" type="submit">Iniciar sesión</button>
+      </form>
+
+      <section id="inventory-panel" class="inventory-panel" aria-labelledby="inventory-title" hidden>
+        <div class="inventory-heading">
+          <div>
+            <h2 id="inventory-title">Existencias</h2>
+            <p>Solo puedes modificar el stock de los productos.</p>
+          </div>
+          <button id="admin-logout" class="admin-secondary-button" type="button">Cerrar sesión</button>
+        </div>
+
+        <label class="inventory-search-label" for="inventory-search">Buscar producto</label>
+        <input id="inventory-search" class="inventory-search" type="search" placeholder="Nombre o categoría">
+        <div class="inventory-table-wrap">
+          <table class="inventory-table">
+            <thead>
+              <tr>
+                <th scope="col">Producto</th>
+                <th scope="col">Categoría</th>
+                <th scope="col">Stock</th>
+                <th scope="col"><span class="visually-hidden">Acción</span></th>
+              </tr>
+            </thead>
+            <tbody id="inventory-rows"></tbody>
+          </table>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <script src="admin.js"></script>
+</body>
+</html>
