@@ -18,23 +18,31 @@ En pocas palabras: el navegador muestra la tienda, Node.js atiende las solicitud
 ### Primera vez
 
 1. Instala Node.js versión 20.6 o posterior.
-2. Abre XAMPP e inicia **MySQL**. No hace falta iniciar Apache para esta aplicación.
+2. Instala e inicia MySQL o MariaDB (por ejemplo, con XAMPP). No hace falta iniciar Apache para esta aplicación.
 3. Abre PowerShell y entra a la carpeta del proyecto:
 
    ```powershell
    cd "C:\Users\damia\Downloads\proyecto-Paula"
    ```
 
-4. Instala las piezas de Node.js que el proyecto necesita:
+4. Instala las dependencias de Node.js:
 
    ```powershell
-   npm install
+   npm ci
    ```
 
-5. Revisa el archivo `.env` que ya está en la carpeta. Ahí están el servidor y el nombre de la base MySQL, el usuario y el puerto. Si en otra computadora no existe, crea un archivo llamado `.env` con estos datos y ajústalos según XAMPP:
+5. Crea la base y las tablas de ejemplo importando `db/schema.sql` en phpMyAdmin o desde la consola de MySQL. El script crea la base `rutamotor` y carga los productos de demostración. La tabla `admin` queda vacía; no se incluye una cuenta ni contraseña compartida. Si ya tienes una base con ese nombre y datos que quieres conservar, no importes el script sobre ella.
+
+6. Crea tu configuración local a partir de la plantilla:
+
+   ```powershell
+   Copy-Item .env.example .env
+   ```
+
+   Abre `.env` y ajusta el puerto, usuario y contraseña según tu instalación:
 
    ```text
-   DB_HOST=localhost
+   DB_HOST=127.0.0.1
    DB_PORT=3306
    DB_NAME=rutamotor
    DB_USER=root
@@ -42,9 +50,9 @@ En pocas palabras: el navegador muestra la tienda, Node.js atiende las solicitud
    PORT=3000
    ```
 
-   Si configuraste una contraseña para MySQL, escríbela después de `DB_PASSWORD=`. Si no tiene, deja el valor vacío. No compartas el archivo `.env`: puede contener contraseñas y está excluido de Git.
+   Si configuraste una contraseña para MySQL, escríbela después de `DB_PASSWORD=`. El archivo `.env` es local y no se comparte por Git; cada persona debe crear el suyo.
 
-6. Confirma en phpMyAdmin que la base se llame `rutamotor` y tenga las tablas `productos` y `admin`. Este proyecto espera estas columnas:
+7. Si no importaste el script, confirma en phpMyAdmin que la base se llame `rutamotor` y tenga las tablas `productos` y `admin`. Este proyecto espera estas columnas:
 
    - En `productos`: `id`, `nombre`, `descripcion`, `categoria`, `precio_cop` y `stock`. La columna `created_at` puede existir, pero no es necesaria para mostrar el catálogo.
    - En `admin`: `id_admin`, `nombre_admin` y `contraseña_admin`.
@@ -53,7 +61,7 @@ En pocas palabras: el navegador muestra la tienda, Node.js atiende las solicitud
 
 ### Cada vez que quieras usar la tienda
 
-1. Inicia MySQL desde XAMPP.
+1. Inicia MySQL o MariaDB.
 2. Abre PowerShell, entra a la carpeta y ejecuta:
 
    ```powershell
@@ -83,6 +91,8 @@ La dirección `http://127.0.0.1:3000/api/health` permite comprobar que el servid
 | `admin.js` | Carga los productos del panel y guarda los cambios de existencias. |
 | `package.json` | Indica a Node.js qué necesita el proyecto y cómo se inicia con `npm start`. |
 | `package-lock.json` | Mantiene anotadas las versiones exactas de las dependencias instaladas. No hace falta editarlo a mano. |
+| `db/schema.sql` | Crea la base de datos de ejemplo y carga el catálogo inicial. |
+| `.env.example` | Plantilla pública para crear la configuración local `.env`. |
 | `.env` | Configuración privada de la conexión a MySQL en este computador. No se debe compartir ni subir a Git. |
 | `.gitignore` | Indica a Git que no incluya `.env` ni las dependencias instaladas. |
 | `assets/productos/` | Las fotografías de los productos y una imagen de respaldo para los que no tienen foto. |
