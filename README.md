@@ -1,5 +1,20 @@
 # Ruta Motor: guía sencilla del proyecto
 
+## Publicar una versión accesible por enlace
+
+La aplicación completa necesita Node.js y una base MySQL o MariaDB accesible desde Internet. GitHub Pages solo puede publicar los archivos estáticos y no puede ejecutar `servidor.js` ni la base de datos.
+
+Para publicar desde GitHub con Render:
+
+1. Crea una base MySQL/MariaDB en un proveedor que permita conexiones externas e importa `db/schema.sql`.
+2. Sube este repositorio a GitHub.
+3. Entra a Render, selecciona **New > Blueprint** y autoriza el repositorio.
+4. Al crear el servicio, añade el host, puerto, nombre, usuario y contraseña de la base en las variables indicadas por `render.yaml`.
+5. Mantén `DB_SSL=true` si el proveedor exige conexiones cifradas. Usa `false` únicamente si el proveedor no ofrece TLS.
+6. Render generará una dirección pública HTTPS con formato `https://ruta-motor.onrender.com`.
+
+No compartas el archivo `.env`, su contraseña ni datos reales de administración. GitHub debe contener solo `.env.example`.
+
 Ruta Motor es una tienda de demostración de repuestos y accesorios para vehículos. Permite consultar productos y precios, preparar un carrito, confirmar una compra de prueba y administrar las existencias.
 
 Esta guía explica qué contiene el proyecto, cómo ponerlo en marcha y qué hace cada parte. No necesitas saber programar para seguir los pasos.

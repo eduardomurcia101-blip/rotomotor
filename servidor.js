@@ -603,8 +603,8 @@ const server = http.createServer(async (request, response) => {
 async function startServer() {
   await database.query('SELECT 1');
   const port = Number(process.env.PORT || 3000);
-  server.listen(port, '127.0.0.1', () => {
-    console.log(`Conexión a MySQL correcta; Ruta Motor disponible en http://127.0.0.1:${port}`);
+  server.listen(port, '0.0.0.0', () => {
+    console.log(`Conexión a MySQL correcta; Ruta Motor disponible en el puerto ${port}`);
   });
 }
 
