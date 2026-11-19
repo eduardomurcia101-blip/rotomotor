@@ -11,7 +11,8 @@ Para publicar desde GitHub con Render:
 3. Entra a Render, selecciona **New > Blueprint** y autoriza el repositorio.
 4. Al crear el servicio, añade el host, puerto, nombre, usuario y contraseña de la base en las variables indicadas por `render.yaml`.
 5. Mantén `DB_SSL=true` si el proveedor exige conexiones cifradas. Usa `false` únicamente si el proveedor no ofrece TLS.
-6. Render generará una dirección pública HTTPS con formato `https://ruta-motor.onrender.com`.
+6. Si el proveedor usa un certificado propio, descarga su CA, copia el contenido PEM completo y guárdalo en `DB_SSL_CA` como variable de Render. También puedes pegarlo con saltos de línea convertidos a `\n`.
+7. Render generará una dirección pública HTTPS con formato `https://ruta-motor.onrender.com`.
 
 No compartas el archivo `.env`, su contraseña ni datos reales de administración. GitHub debe contener solo `.env.example`.
 
