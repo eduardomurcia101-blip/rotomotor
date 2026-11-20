@@ -79,7 +79,10 @@ function requestHasSameOrigin(request) {
 
   try {
     const parsedOrigin = new URL(origin);
-    const expectedProtocol = request.socket.encrypted ? 'https:' : 'http:';
+    const forwardedProtocol = request.headers['x-forwarded-proto'];
+    const expectedProtocol = forwardedProtocol
+      ? `${forwardedProtocol.split(',')[0].trim()}:`
+      : request.socket.encrypted ? 'https:' : 'http:';
     return parsedOrigin.host === request.headers.host && parsedOrigin.protocol === expectedProtocol;
   } catch {
     return false;
